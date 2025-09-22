@@ -42,12 +42,21 @@ public class Main {
     }
 
     public static void printAllData(ArrayList<Task> tasksData) {
+        System.out.println("Printing all data using iteration...");
         for (Task t : tasksData) {
             System.out.println(t);
         }
+        System.out.println();
+    }
+
+    public static void printDataUsingStreams(ArrayList<Task> tasks) {
+        System.out.println("Printing data using streams ...");
+        tasks.stream()
+                .forEach(System.out::println);
     }
 
     public static void printDeadlines(ArrayList<Task> tasksData) {
+        System.out.println("Printing data using streams using iteration...");
         for (Task t : tasksData) {
             if (t instanceof Deadline) {
                 System.out.println(t);
